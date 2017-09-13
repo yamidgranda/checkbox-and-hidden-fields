@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td><input class="checkbox-input" type="checkbox"></td>
+        <td>campo2</td>
+        <td class="hidden concealed">campo3</td>
+        <td>campo4</td>
+      </tr>
+      <tr>
+        <td><input class="checkbox-input" type="checkbox"></td>
+        <td>campo2</td>
+        <td class="hidden concealed">campo3</td>
+        <td>campo4</td>
+      </tr>
+      <tr>
+        <td><input class="checkbox-input" type="checkbox"></td>
+        <td>campo2</td>
+        <td class="hidden concealed">campo3</td>
+        <td>campo4</td>
+      </tr>
+      <tr>
+        <td><input class="checkbox-input" type="checkbox"></td>
+        <td>campo2</td>
+        <td class="hidden concealed">campo3</td>
+        <td>campo4</td>
+      </tr>
+      <tr>
+        <td><input class="checkbox-input" type="checkbox"></td>
+        <td>campo2</td>
+        <td class="hidden concealed">campo3</td>
+        <td>campo4</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    document.querySelectorAll('.checkbox-input').forEach(function (e) {
+      e.onclick = function () {
+        if (this.checked) {
+          e.parentElement.parentElement.querySelector('.concealed').classList.remove("hidden");
+        } else {
+          e.parentElement.parentElement.querySelector('.concealed').classList.add("hidden");
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
